@@ -18,4 +18,5 @@ class NoteFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_note, container, false)
     }
+
 }
