@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/noteFragment"
-        android:name="com.example.realtimedatabasefirebase.NoteFragment"
+        android:name="com.example.realtimedatabasefirebase.note.NoteFragment"
         android:label="fragment_note"
         tools:layout="@layout/fragment_note" />
 </navigation>
