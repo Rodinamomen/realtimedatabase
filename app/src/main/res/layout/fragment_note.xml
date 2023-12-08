@@ -37,6 +37,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+
             android:id="@+id/textView"
             android:layout_width="122dp"
             android:layout_height="26dp"
