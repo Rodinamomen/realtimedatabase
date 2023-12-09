@@ -1,5 +1,6 @@
 package com.example.realtimedatabasefirebase.note.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -34,10 +35,16 @@ class NoteViewModel() :ViewModel() {
             dbNotes.addListenerForSingleValueEvent(object : ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
                         if(snapshot.exists()){
+                            val notesList = mutableListOf<Note>()
                             for(noteSnapshot in snapshot.children){
                                 var note = noteSnapshot.getValue(Note::class.java)
-
+                                note?.noteid = noteSnapshot.key
+                               notesList.add(note!!)
+                                Log.d("ittest", ": ${notesList} ")
                             }
+                            _notes.value= notesList
+
+
                         }
                 }
 
